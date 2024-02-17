@@ -124,7 +124,7 @@
     const yesBtn = document.getElementById('yes-btn');
     let count = 0;
 
-    no.addEventListener('mouseover', () => {
+    const action = () => {
       count++;
       const x = Math.floor(Math.random() * (window.innerWidth - 150));
       const y = Math.floor(Math.random() * (window.innerHeight - 150));
@@ -138,8 +138,12 @@
       noBtn.style.fontSize = `${20 - 0.5}px`;
       yesBtn.style.fontSize = `${20 + count}px`;
       yes.style.left = '50%';
+    }
 
-    });
+    no.addEventListener('mouseover', action);
+    no.addEventListener('mouseenter', action);
+    no.addEventListener('mousedown', action);
+    no.addEventListener('mouseclick')
   </script>
 </body>
 
